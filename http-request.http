@@ -1,0 +1,92 @@
+###
+GET http://localhost:8080/all/test0
+
+###
+POST http://localhost:8080/all/test0
+Content-Type: application/json
+
+"test0 body"
+
+###
+GET http://localhost:8080/all/test1
+
+###
+POST http://localhost:8080/all/test1
+Content-Type: application/json
+
+"test1 body"
+
+###
+GET http://localhost:8080/all/test2
+
+###
+POST http://localhost:8080/all/test2
+Content-Type: application/json
+
+"test2 body"
+
+
+###
+GET http://localhost:8080/
+
+
+###
+GET http://localhost:8080/any
+
+
+###
+GET http://localhost:8080/some
+
+###
+GET http://localhost:8080/another
+
+### admin:
+
+###
+GET http://localhost:8080/admin/test0
+
+###
+POST http://localhost:8080/admin/test0
+Content-Type: application/json
+
+"test0 body"
+
+###
+GET http://localhost:8080/admin/test1
+
+###
+POST http://localhost:8080/admin/test1
+Content-Type: application/json
+
+"test1 body"
+
+###
+GET http://localhost:8080/admin/test2
+
+###
+POST http://localhost:8080/admin/test2
+Content-Type: application/json
+
+"test2 body"
+
+
+### user:
+
+###
+GET http://localhost:8080/user/test1
+
+###
+GET http://localhost:8080/user/test2
+
+###
+POST http://localhost:8080/user/test1
+Content-Type: application/json
+
+"test1 body"
+
+###
+POST http://localhost:8080/user/test2
+Content-Type: application/json
+
+"test2 body"
+###
