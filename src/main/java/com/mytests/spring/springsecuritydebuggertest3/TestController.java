@@ -74,7 +74,7 @@ public class TestController {
     // .requestMatchers(HttpMethod.POST,"/admin/**").hasRole("SUPER")
     // no inlay at all, it is impossible to unlock from controller
     @RequestMapping(path = "/admin/test2")
-    public ResponseEntity<String> adminTest2(@RequestBody String body, @CurrentSecurityContext SecurityContext context) {
+    public ResponseEntity<String> adminTest2(@RequestBody(required = false) String body, @CurrentSecurityContext SecurityContext context) {
         String details = Objects.requireNonNull(context.getAuthentication()).toString();
         return ResponseEntity.ok("admin test2: " + details + ", body: " + body);
     }
@@ -98,7 +98,7 @@ public class TestController {
     // .requestMatchers("/users/**").hasRole("USER")
     // unlock from controller is enabled, but doesn't work
     @RequestMapping(path = "/user/test2")
-    public ResponseEntity<String> userTest2(@RequestBody String body, @CurrentSecurityContext SecurityContext context) {
+    public ResponseEntity<String> userTest2(@RequestBody(required = false) String body, @CurrentSecurityContext SecurityContext context) {
         String details = Objects.requireNonNull(context.getAuthentication()).toString();
         return ResponseEntity.ok("user test2: " + details + ", body: " + body);
     }
@@ -124,7 +124,7 @@ public class TestController {
     // .requestMatchers(HttpMethod.POST,"/all/**").hasAnyRole("USER","ADMIN","SUPER")
     // no inlay at all, it is impossible to unlock from controller
     @RequestMapping(path = "/all/test2")
-    public ResponseEntity<String> allTest2(@RequestBody String body, @CurrentSecurityContext SecurityContext context) {
+    public ResponseEntity<String> allTest2(@RequestBody(required = false) String body, @CurrentSecurityContext SecurityContext context) {
         String details = Objects.requireNonNull(context.getAuthentication()).toString();
         return ResponseEntity.ok("all test2: " + details + ", body: " + body);
     }
